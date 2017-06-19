@@ -1,8 +1,14 @@
 package com.bwf.hsj;
 
+import java.io.UnsupportedEncodingException;
+
 public class FirstGit {
 	public static void main(String[] args) {
 		System.out.println("hello world");
-		System.out.println("你好，世界！");
+		try {
+			System.out.println(new String("你好，世界！".getBytes("UTF-8"),"GBK"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
 }
